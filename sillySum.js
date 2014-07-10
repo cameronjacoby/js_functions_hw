@@ -1,10 +1,10 @@
-var mySillySum = 0;
+var total = 0;
 
 var sillySum = function(arr) {
 	for (var i = 0; i < arr.length; i += 1) {
-		mySillySum += arr[i] * i;
+		total += arr[i] * i;
 	}
-	return mySillySum;
+	return total;
 }
 
 var myArray = [1, 2, 3, 4];
