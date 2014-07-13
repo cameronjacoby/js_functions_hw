@@ -1,18 +1,16 @@
-var count = {};
-
 var letterCount = function(word) {
-  var string = word.toLowerCase();
+  var letters = word.toLowerCase();
+  var result = {};
 
-  for (i = 0; i < string.length; i += 1) {
-    count[string[i]] = 0;
-
-    for (j = 0; j < string.length; j += 1){
-      if (string[i] === string[j]) {
-        count[string[i]] += 1
-      }
+  for (i = 0; i < letters.length; i += 1) {
+    if (result[letters[i]]) {
+      result[letters[i]] += 1;
+    }
+    else {
+      result[letters[i]] = 1;
     }
   }
-  return count;
+  return result;
 }
 
 var myWord = 'BANANAS';
